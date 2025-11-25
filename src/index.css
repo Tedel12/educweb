@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+
+/* === Fonts locales EducWeb === */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('./assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+
+/* === VARIABLES GLOBALES EDUCWEB === */
+:root {
+  --color-primary: #0A2647;     /* Bleu foncé */
+  --color-accent: #2C786C;      /* Vert menthe */
+  --color-background: #F5F7F8;  /* Blanc cassé */
+  --color-muted: #E0E0E0;       /* Gris doux */
+  --color-textDark: #4B5563;    /* Gris foncé */
+}
+
+/* === STYLE GLOBAL === */
+body {
+  background-color: var(--color-background);
+  color: var(--color-textDark);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === UTILITAIRES PERSONNALISÉS === */
+.bg-primary { background-color: var(--color-primary); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-background { background-color: var(--color-background); }
+.bg-muted { background-color: var(--color-muted); }
+
+
+.border-primary { border-color: var(--color-primary); }
+.border-accent { border-color: var(--color-accent); }
+
+.hover-bg-accent:hover { background-color: var(--color-accent); }
+.hover-bg-primary:hover { background-color: var(--color-primary); }
+
+
+/* === Hover fixes === */
+.hover-text-accent:hover {
+  color: var(--color-accent);
+}
+
+.hover-bg-accent:hover {
+  background-color: var(--color-accent);
+}
+
+.hover-bg-primary:hover {
+  background-color: var(--color-primary);
+}
+
+.hover-text-primary:hover {
+  color: var(--color-primary);
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-22px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+
+::-webkit-scrollbar{
+    display: none;
+}
